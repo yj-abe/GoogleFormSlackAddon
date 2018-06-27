@@ -5,7 +5,10 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "npm run tsc &&  cpx appsscript.json ./build",
+    "build": "rm -fr ./build && npm run tsc && cpx appsscript.json ./build && cpx src/**/*.html ./build",
     "push": "clasp push"
+  },
+  "dependencies": {
+    "cpx": "^1.5.0"
   }
 }
